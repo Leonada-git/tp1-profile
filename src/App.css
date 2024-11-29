@@ -1,38 +1,264 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #efebf3;
+
+}
+header{
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+}
+footer{
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  color: #5a1296;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+}
+.logo img{
+  width: 73px;
+  height: auto;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+ul li {
+  float: right;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li a {
+  display: block;
+  color: rgb(13, 37, 88);
+  font-size: 18px;
+  text-align: center;
+  padding: 25px 30px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ul li a:hover{
+  background-color: #9c56f1;
+  color: #ffffff;
+}
+
+ul li a.active {
+ background-color: #c4a3f0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  ul{
+    float:right;
+    width: 70%;
   }
+    ul li {float: none;}
+    ul li a {
+      display: block;
+      color: rgb(97, 16, 202);
+      font-size: 18px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 }
+h1{
+  margin-top: 9%;
+}
+.p_body{
+  width: 90%;
+  margin: 5%;
+  margin-left: 8%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+h1 {
+  margin-left: 6%;
+  color: #4e0486;
+  font-size: 30px;
+}
+.block{
+  display: inline;
+}
+.card1, .card2, .card3 {
+  color: #000000;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(99, 2, 2, 0.6);
+  padding: 20px;
+}
+.card1 {
+  margin-top: 2%;
+  width: 25%;
+  background: rgb(197, 245, 167)
+
+}
+.card2 {
+  position: absolute;
+  top: 27%;
+  left: 45%;
+  width: 40%;
+  background: rgb(248, 193, 240)
+}
+.card3 {
+  position: absolute;
+  width: 50%;
+  top: 70%;
+  left: 40%;
+  margin-bottom: 5%;
+  background:rgb(171, 227, 248)
+
+}
+.tbl td {
+  padding: 8px 12px;
+  vertical-align: top;
+
+}
+.tbl td:first-child {
+  font-weight: bold;
+  text-align: left;
+}
+.card-top{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.image{
+  border: #ffffff solid;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.image img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.tbl {
+  margin: 0 25%;
+  width: 50%;
+  border-collapse: collapse;
+}
+.card-body{
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* Responsive Cards */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Small screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  h1{
+    margin-top: 60%;
   }
-  to {
-    transform: rotate(360deg);
+  .p_body{
+    width: 90%;
+    margin: 5%;
+  }
+  .card1 {
+    margin: 8%;
+    width: 75%;
+  }
+  .card2 {
+    margin: 4%;
+    position: relative;
+    top: 95%;
+    left: 4%;
+    width: 75%;
+  
+  }
+  .card3 {
+    margin: 4%;
+    position: relative;
+    right: 5%;
+    width: 75%;
+    height: 20%;
+    left: 4%;
+    margin-bottom: 26%;
+  }
+  .logo img{
+    margin-top: 10%;
+    width: 73px;
+    height: auto;
+  }
+  .tbl td {
+    padding: 6px 1px;
+  
+  }
+  .tbl td:first-child {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+  }
+  .card-top{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .image{
+    border: #ffffff solid;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+  }
+  .image img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+  .tbl {
+    margin: 0 18%;
+    width: 50%;
+    border-collapse: collapse;
+  }
+  .card-body{
+    font-size: 18px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  .card3 p{
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+/* Medium screens (min-width: 600px, max-width: 1200px) */
+@media screen and (max-width: 1188px) and (min-width: 600px) {
+  h1{
+    text-align: center;
+    margin-top: 12%;
+  }
+  .p_body{
+    width: 90%;
+    margin: 5%;
+  }
+  .card1 {
+    margin-left: 14%;
+    width: 70%;
+  }
+  .card2 {
+    margin: 4%;
+    position: relative;
+    top: 95%;
+    left: 10%;
+    width: 70%;
+  }
+  .card3 {
+    margin: 4%;
+    position: relative;
+    width: 70%;
+    height: 20%;
+    left: 10%;
   }
 }
